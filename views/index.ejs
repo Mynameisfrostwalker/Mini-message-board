@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>Home</title>
+    </head>
+    <body>
+        <header>
+            <h1><% title %></h1>
+            <p>Welcome to the home page!</p>
+        </header>
+        <main>
+            <% messages.forEach(message => { %>
+                <div class="message">
+                    <div class = "info">
+                        <p><%= message.user %></p>
+                        <p><%= message.date %></p>
+                    </div>
+                    <div class = "content">
+                        <p><%= message.text %></p>
+                    </div>
+                </div>
+            <% }); %>
+        </main>
+        <footer>
+            <p>
+                <a href="https://github.com/Mynameisfrostwalker" target="_blank" rel="noopener noreferrer">Frostwalker</a>
+            </p>
+        </footer>
+    </body>
+</html>

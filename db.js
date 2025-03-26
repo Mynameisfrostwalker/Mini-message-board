@@ -26,4 +26,8 @@ const messages = [
     }
   ];  
 
-  module.exports = messages;
+  const getMessages = async () => {
+    return messages;
+  };
+
+  module.exports = getMessages;

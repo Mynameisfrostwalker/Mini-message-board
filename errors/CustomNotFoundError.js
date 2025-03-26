@@ -6,3 +6,5 @@ class CustomNotFoundError extends Error {
     this.statusCode = 404;
   }
 }
+
+module.exports = { CustomNotFoundError }

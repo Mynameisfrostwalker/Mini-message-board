@@ -1,14 +1,16 @@
 <html>
     <head>
-        <title>Home</title>
+        <title>Message</title>
+        <link rel="stylesheet" href="reset.css" />
+        <link rel="stylesheet" href="main.css" />
     </head>
     <body>
        <%- include("header", { title }) %>
         <main>
             <div class="message">
                 <div class = "info">
-                    <p><%= message.user %></p>
-                    <p><%= message.date %></p>
+                    <h3><%= message.user %></h3>
+                    <h5><%= message.added %></h5>
                 </div>
                 <div class = "content">
                     <p><%= message.text %></p>

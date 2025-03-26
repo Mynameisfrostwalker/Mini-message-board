@@ -1,28 +1,32 @@
+const formatDate = (date) => {
+    return date.toISOString().replace('T', ' ').replace('Z', '');
+}
+
 const messages = [
     {
       text: "Hi there!",
       user: "Amando",
-      added: new Date()
+      added: formatDate(new Date())
     },
     {
       text: "Hello World!",
       user: "Charles",
-      added: new Date()
+      added: formatDate(new Date())
     },
     {
       text: "Good Morning!",
       user: "Jane",
-      added: new Date()
+      added: formatDate(new Date())
     },
     {
         text: "Good Evening!",
         user: "John",
-        added: new Date()
+        added: formatDate(new Date())
     },
     {
         text: "Good Night!",
         user: "Doe",
-        added: new Date()
+        added: formatDate(new Date())
     }
   ];  
 
@@ -32,6 +36,6 @@ const messages = [
 
   const getMessageFromDB = async (index) => messages[index];
 
-  const addMessage = async (text, user) => messages.push({text, user, added: new Date()})
+  const addMessage = async (text, user) => messages.push({text, user, added: formatDate(new Date())})
 
   module.exports = { getMessagesFromDB, addMessage, getMessageFromDB };

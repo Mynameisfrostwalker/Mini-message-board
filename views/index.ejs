@@ -3,20 +3,9 @@
         <title>Home</title>
     </head>
     <body>
-        <header>
-            <div class="intro">
-                <h1><% title %></h1>
-                <p>Welcome to the home page!</p>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/new">New message</a></li>
-                </ul>
-            </nav>
-        </header>
+       <%- include("header", { title }) %>
         <main>
-            <% messages.forEach(message => { %>
+            <% messages.forEach((message, index) => { %>
                 <div class="message">
                     <div class = "info">
                         <p><%= message.user %></p>
@@ -25,13 +14,12 @@
                     <div class = "content">
                         <p><%= message.text %></p>
                     </div>
+                    <div class="button">
+                        <p><a href="/messages/<%= index %>">Open</a></p>
+                    </div>
                 </div>
             <% }); %>
         </main>
-        <footer>
-            <p>
-                <a href="https://github.com/Mynameisfrostwalker" target="_blank" rel="noopener noreferrer">Frostwalker</a>
-            </p>
-        </footer>
+        <%- include("footer") %>
     </body>
 </html>

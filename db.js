@@ -30,6 +30,8 @@ const messages = [
     return messages;
   };
 
+  const getMessageFromDB = async (index) => messages[index];
+
   const addMessage = async (text, user) => messages.push({text, user, added: new Date()})
 
-  module.exports = { getMessagesFromDB, addMessage };
+  module.exports = { getMessagesFromDB, addMessage, getMessageFromDB };

@@ -3,6 +3,7 @@ const dotenv = require("dotenv");
 const path = require("node:path");
 const indexRouter = require("./routes/indexRouter");
 const newMessageRouter = require("./routes/newMessageRouter");
+const messageRouter = require("./routes/messageRouter")
 
 dotenv.config();
 
@@ -18,8 +19,10 @@ app.set("view engine", "ejs");
 const assetPath = path.join(__dirname, "public");
 app.use(express.static(assetPath));
 
-app.use("/", indexRouter);
+app.use("/messages", messageRouter);
 app.use("/new", newMessageRouter);
+app.use("/", indexRouter);
+
 
 app.use((err, req, res, next) => {
     console.error(err);

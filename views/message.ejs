@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>Home</title>
+    </head>
+    <body>
+       <%- include("header", { title }) %>
+        <main>
+            <div class="message">
+                <div class = "info">
+                    <p><%= message.user %></p>
+                    <p><%= message.date %></p>
+                </div>
+                <div class = "content">
+                    <p><%= message.text %></p>
+                </div>
+                <div class="button">
+                    <p><a href="/">Back</a></p>
+                </div>
+            </div>
+        </main>
+        <%- include("footer") %>
+    </body>
+</html>

@@ -2,7 +2,7 @@ const expressAsyncHandler = require('express-async-handler')
 const { addMessage } = require("../db");
 
 const displayForm = expressAsyncHandler(async (req, res) => {
-    res.render("form");
+    res.render("form", {title: "Add New Message"});
 });
 
 const addNewMessage = expressAsyncHandler(async (req, res) => {

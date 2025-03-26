@@ -1,9 +1,21 @@
-<form method="post" action="/new">
-    <label for="user">User:</label>
-    <input type="text" name="user" id="user" required>
+<html>
+    <head>
 
-    <label for="text">Message:</label>
-    <textarea name="text" id="text" required></textarea>
+    </head>
+    <body>
+        <%- include("header") %>
+        <main>
+            <form method="post" action="/new">
+                <label for="user">User:</label>
+                <input type="text" name="user" id="user" required>
+            
+                <label for="text">Message:</label>
+                <textarea name="text" id="text" required></textarea>
+            
+                <button type="submit">Send</button>
+            </form>
+        </main>
+        <%- include("footer") %>
+    </body>
+</html>
 
-    <button type="submit">Send</button>
-</form>

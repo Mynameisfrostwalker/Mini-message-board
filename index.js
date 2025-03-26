@@ -1,6 +1,7 @@
 const express = require("express");
 const dotenv = require("dotenv");
 const path = require("node:path");
+const indexRouter = require("./routes/indexRouter");
 
 dotenv.config();
 
@@ -14,9 +15,8 @@ app.set("view engine", "ejs");
 const assetPath = path.join(__dirname, "public");
 app.use(express.static(assetPath));
 
-app.get("/", (req, res) => {
-  res.render("index");
-});
+app.use("/", indexRouter);
+app.use("/new", indexRouter);
 
 app.use((err, req, res, next) => {
     console.error(err);

@@ -1,0 +1,27 @@
+{
+  "name": "mini-message-board",
+  "version": "1.0.0",
+  "description": "Mini-message-board for TOP",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "node --watch index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mynameisfrostwalker/Mini-message-board.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mynameisfrostwalker/Mini-message-board/issues"
+  },
+  "homepage": "https://github.com/Mynameisfrostwalker/Mini-message-board#readme",
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "ejs": "^3.1.10",
+    "express": "^4.21.2",
+    "express-async-handler": "^1.2.0"
+  }
+}

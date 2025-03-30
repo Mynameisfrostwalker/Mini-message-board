@@ -110,3 +110,7 @@ form {
         border: none;
     }
 }
+
+h5 {
+    text-align: right;
+}

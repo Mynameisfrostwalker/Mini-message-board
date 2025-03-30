@@ -9,8 +9,8 @@
         <main>
             <div class="message">
                 <div class = "info">
-                    <h3><%= message.user %></h3>
-                    <h5><%= message.added %></h5>
+                    <h3><%= message.username %></h3>
+                    <h5><%= message.added.toISOString().slice(0, 19).replace("T", " ") %></h5>
                 </div>
                 <div class = "content">
                     <p><%= message.text %></p>
